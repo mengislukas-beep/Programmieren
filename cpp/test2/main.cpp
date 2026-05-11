@@ -12,7 +12,7 @@ int main() {
     print(result);
 
 
-    Person person("Alice_Hallo", 300);
+    Person person("Alice", 300);
     person.vorstellen();
 
     return 0;
