@@ -1,0 +1,210 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pakete
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+
+\geometry{a4paper, margin=2.5cm}
+
+\title{\Huge \textbf{Ich mache einen anderen Titel}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+
+
+\section{Mechanik von Massenpunkten}
+
+\textbf{Definition Impuls:}
+\[
+\vec{p} = m \vec{v}
+\quad \text{(Impuls)}
+\]
+\[
+[p] = \mathrm{kg\, m\, s^{-1}} = \mathrm{N\, s}
+\]
+
+\vspace{0.5cm}
+
+\textbf{Newton: Hallo ich mache noch etwas anders}
+Er hat erkannt, dass $\vec{p}$ zur Beschreibung von Kraftwirkungen zentral ist.
+
+\subsection*{1. Newton}
+Ist die resultierende Kraft null:
+\[
+\vec{F}_{\text{res}} = 0 \Rightarrow \vec{p} = \text{const}
+\]
+
+\begin{itemize}
+\item $\vec{p}=0 \Rightarrow \vec{v}=0$ (Ruhe)
+\item $\vec{p}=\text{const}\neq0 \Rightarrow$ Richtung + Betrag konstant
+\end{itemize}
+
+\subsection*{3. Newton}
+Kräfte treten paarweise auf:
+\[
+\vec{F}_{12} = -\vec{F}_{21}
+\]
+
+\textbf{Beispiel: Gewichtskraft}
+\begin{center}
+\vspace*{0.5cm}
+\begin{tikzpicture}
+\draw (0,0) circle (1);
+\draw[->, red, thick] (0,0) -- (0,-1.5) node[below] {$\vec{F}_G$};
+\node at (0,0) {$m$};
+\end{tikzpicture}
+\end{center}
+\[
+\vec{F}_G = m \vec{g}
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Impulserhaltung}
+
+\begin{tikzpicture}
+\draw[thick] (0,0) -- (6,0);
+
+\draw (1,0) rectangle (2,1);
+\node at (1.5,0.5) {$m_1$};
+\draw[->] (2,0.5) -- (3,0.5) node[right] {$v_1$};
+
+\draw (4,0) rectangle (5,1);
+\node at (4.5,0.5) {$m_2$};
+\draw[->] (4,0.5) -- (3,0.5) node[left] {$v_2$};
+\end{tikzpicture}
+
+\[
+\vec{p}_1 + \vec{p}_2 = \vec{p}_1' + \vec{p}_2'
+\]
+
+\[
+\Delta \vec{p}_1 + \Delta \vec{p}_2 = 0
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Feder (Hooke)}
+
+\begin{tikzpicture}
+\draw (0,2) -- (0,3);
+\draw[decorate, decoration={zigzag}] (0,2) -- (0,0);
+\draw ( -0.5,0) rectangle (0.5,-0.5);
+\node at (0,-0.25) {$m$};
+\draw[<->] (1,2) -- (1,0) node[midway,right] {$x$};
+\end{tikzpicture}
+
+\[
+F = -D x
+\quad [D] = \mathrm{N/m}
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Reibung}
+
+\begin{tikzpicture}
+\draw[thick] (0,0) -- (5,0);
+\draw (2,0) rectangle (3,1);
+\node at (2.5,0.5) {$m$};
+
+\draw[->, blue] (3,0.5) -- (4,0.5) node[right] {$v$};
+\draw[->, red] (2,0.5) -- (1,0.5) node[left] {$F_R$};
+\draw[->] (2.5,1) -- (2.5,2) node[above] {$F_N$};
+\end{tikzpicture}
+
+\[
+F_R = \mu_G F_N
+\]
+\[
+F_H \le \mu_H F_N
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Schiefe Ebene}
+
+\begin{tikzpicture}
+\draw (0,0) -- (5,0) -- (5,2) -- cycle;
+\draw (3,1) rectangle (4,2);
+\node at (3.5,1.5) {$m$};
+
+\draw[->] (3.5,1.5) -- (3.5,0.2) node[below] {$mg$};
+\draw[->] (3.5,1.5) -- (4.5,2) node[right] {$F_N$};
+\end{tikzpicture}
+
+\[
+F_{\parallel} = mg \sin\alpha, \quad F_N = mg \cos\alpha
+\]
+
+Arbeit:
+\[
+W = \vec{F}\cdot \vec{s} = Fs\cos\alpha
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Energie}
+
+\[
+E_{\text{kin}} = \frac{1}{2}mv^2
+\]
+
+\[
+E_{\text{kin}} = -W_{0 \to v}
+\]
+
+\[
+2as = v^2 - v_0^2
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Vollkommen unelastischer Stoß (1D)}
+
+\begin{tikzpicture}
+\draw[thick] (0,0) -- (6,0);
+
+\draw (1,0) rectangle (2,1);
+\node at (1.5,0.5) {$m_1$};
+\draw[->] (2,0.5) -- (3,0.5) node[right] {$v_1$};
+
+\draw (4,0) rectangle (5,1);
+\node at (4.5,0.5) {$m_2$};
+\draw[->] (4,0.5) -- (3,0.5) node[left] {$v_2$};
+\end{tikzpicture}
+
+\[
+m_1 v_1 + m_2 v_2 = (m_1+m_2)v'
+\]
+
+\[
+v' = \frac{m_1 v_1 + m_2 v_2}{m_1+m_2}
+\]
+
+\[
+E_{\text{kin, vor}} = \frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2
+\]
+
+\[
+E_{\text{kin, nach}} = \frac{1}{2}(m_1+m_2)v'^2
+\]
+
+\[
+E_{\text{kin, vor}} \neq E_{\text{kin, nach}}
+\]
+
+\end{document}

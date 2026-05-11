@@ -1,0 +1,124 @@
+\documentclass{article}
+
+% Pakete
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Einführung in LaTeX}
+\author{Dein Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Was ist LaTeX?}
+LaTeX ist ein Textsatzsystem, das besonders für wissenschaftliche Dokumente verwendet wird.
+Es eignet sich hervorragend für:
+\begin{itemize}
+    \item mathematische Formeln
+    \item strukturierte Dokumente
+    \item wissenschaftliche Arbeiten
+\end{itemize}
+
+Im Gegensatz zu Word arbeitet LaTeX nicht visuell, sondern mit Code.
+
+\section{Grundstruktur eines Dokuments}
+Jedes LaTeX-Dokument besteht aus zwei Teilen:
+\begin{enumerate}
+    \item Präambel (alles vor \texttt{\textbackslash begin\{document\}})
+    \item Dokumentinhalt
+\end{enumerate}
+
+\subsection{Beispiel}
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+Hallo Welt!
+\end{document}
+\end{verbatim}
+
+\section{Textformatierung}
+\subsection{Fett, kursiv, unterstrichen}
+\textbf{Fetter Text}
+
+\textit{Kursiver Text}
+
+\underline{Unterstrichener Text}
+
+\subsection{Absätze}
+Ein neuer Absatz entsteht durch eine Leerzeile.
+
+Dies ist ein neuer Absatz.
+
+\section{Mathematik in LaTeX}
+LaTeX ist besonders stark bei mathematischen Formeln.
+
+\subsection{Inline-Mathe}
+Dies ist eine Formel im Text: $a^2 + b^2 = c^2$
+
+\subsection{Abgesetzte Formeln}
+\[
+E = mc^2
+\]
+
+\subsection{Brüche und Wurzeln}
+\[
+\frac{a}{b}, \quad \sqrt{x}, \quad \sqrt[n]{x}
+\]
+
+\subsection{Summen und Integrale}
+\[
+\sum_{i=1}^{n^2} i^2
+\]
+
+\[
+\int_{0}^{1} x^2 \, dx
+\]
+
+\section{Listen}
+\subsection{Aufzählung}
+\begin{itemize}
+    \item Punkt 1
+    \item Punkt 2
+    \item Punkt 3
+\end{itemize}
+
+\subsection{Nummerierte Liste}
+\begin{enumerate}
+    \item Erster Punkt
+    \item Zweiter Punkt
+\end{enumerate}
+
+\section{Tabellen}
+\begin{tabular}{|c|c|c|}
+\hline
+Spalte 1 & Spalte 2 & Spalte 3 \\
+\hline
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+\hline
+\end{tabular}
+
+\section{Bilder einfügen}
+\begin{figure}[h]
+\centering
+\caption{Ein Beispielbild}
+\end{figure}
+
+\section{Referenzen und Links}
+Ein Beispiel-Link:
+\url{https://www.latex-project.org}
+
+\section{Fazit}
+LaTeX ist ein mächtiges Werkzeug für professionelle Dokumente. Anfangs wirkt es komplex, aber mit etwas Übung ist es sehr effizient.
+
+\end{document}
